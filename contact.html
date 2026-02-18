@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - TravelGo</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="logo">TravelGo</div>
+        <nav class="nav-links" id="navLinks">
+            <a href="{{ url_for('home') }}">Packages</a>
+            <a href="{{ url_for('destinations') }}">Destinations</a>
+            <a href="{{ url_for('packages') }}">Packages</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+       
+    </header>
+    
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <form method="POST">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+    
+        <input type="email" name="email" placeholder="Email" required>
+    
+        <input type="text" name="phone" placeholder="Phone Number" required>
+    
+        <textarea name="address" placeholder="Address"></textarea>
+    
+        <button type="submit" class="btn">Send Message</button>
+    
+    </form>
+    
+    <div class="map">
+        <iframe src="https://maps.google.com/maps?q=India&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+</section>
+
+<!-- Company Info Section -->
+<section class="contact-info">
+
+    <h2>Get In Touch With TravelGo</h2>
+
+    <p>
+        We’d love to hear from you! Whether you have questions about destinations, packages, bookings, 
+        or travel recommendations, our team is always ready to help. At TravelGo, customer satisfaction 
+        is our top priority, and we are committed to providing prompt and friendly assistance for all your travel needs.
+    </p>
+
+    <p>
+        Our travel experts are available to guide you in choosing the perfect destination, customizing packages, 
+        and planning stress-free trips. No matter where you want to go, we’ll help you reach there smoothly and safely.
+    </p>
+
+    <div class="contact-details">
+
+        <div class="info-box">
+            <h3>📍 Office Location</h3>
+            <p>TravelGo Headquarters, Chennai, India</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📞 Phone Support</h3>
+            <p>+91 98765 43210</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📧 Email</h3>
+            <p>support@travelgo.com</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🕒 Working Hours</h3>
+            <p>Monday – Saturday : 9AM – 8PM</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

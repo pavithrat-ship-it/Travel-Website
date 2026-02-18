@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinations - TravelGo</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="logo">TravelGo</div>
+    <nav class="nav-links" id="navLinks">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('destinations') }}">Destinations</a>
+        <a href="{{ url_for('packages') }}">Packages</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+
+
+<!-- Page Intro -->
+<section class="intro">
+    <h2>Explore Our Destinations ✈️</h2>
+    <p>
+        Discover the world’s most breathtaking travel destinations. From vibrant cities and tropical islands 
+        to romantic landscapes and luxurious escapes, we bring you handpicked locations that guarantee unforgettable memories.
+    </p>
+</section>
+
+
+<!-- Destinations Grid -->
+<section class="destinations-preview">
+
+    <h2>Top Travel Picks</h2>
+
+    <div class="destination-grid">
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/cappadocia.jpg') }}">
+            <h3>Cappadocia</h3>
+            <p>Best time: April – June & September – October</p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/iseland.png') }}">
+            <h3>Iseland</h3>
+            <p>Best time: June – August & September – March</p>
+
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/jordan.jpg') }}">
+            <h3>Jordan</h3>
+            <p>Best time: March – May & September – November</p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/seychelles.jpg') }}">
+            <h3>Seychelles</h3>
+            <p>Best time: April – May & October – November</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Travel Tips Section -->
+<section class="features">
+    <h2>Travel Tips for Your Journey 🌍</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-box">
+            <h3>Plan Early</h3>
+            <p>Booking early ensures best deals and availability.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Pack Smart</h3>
+            <p>Carry essentials and travel light for comfort.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Stay Safe</h3>
+            <p>Follow travel guidelines and stay aware of surroundings.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Enjoy Every Moment</h3>
+            <p>Travel is about memories — explore and experience fully.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CTA Section -->
+<section class="cta">
+    <h2>Where Will You Go Next?</h2>
+    <p>Choose your dream destination and start your adventure today.</p>
+    <a href="{{ url_for('packages') }}" class="btn">View Packages</a>
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 TravelGo | Explore • Dream • Discover</p>
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+</html>
